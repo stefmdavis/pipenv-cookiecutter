@@ -80,8 +80,8 @@ repos:
   rev: v1.0.0
   hooks:
   - id: pipenv-setup-sync
-    stages: [push]
+    stages: [pre-push]
     args: ['--pipfile', '--process-dependency-links']
 
   - id: pipenv-setup-check
-    stages: [push]
+    stages: [pre-push]
