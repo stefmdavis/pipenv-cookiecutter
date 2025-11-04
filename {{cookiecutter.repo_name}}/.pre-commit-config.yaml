@@ -77,11 +77,11 @@ repos:
       done"
 
 - repo: https://github.com/stefmdavis/pipenv-setup
-  rev: v3.1.6
+  rev: v1.0.0
   hooks:
   - id: pipenv-setup-sync
-    stages: [push]
+    stages: [pre-push]
     args: ['--pipfile', '--process-dependency-links']
 
   - id: pipenv-setup-check
-    stages: [push]
+    stages: [pre-push]
